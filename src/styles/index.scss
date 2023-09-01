@@ -1,6 +1,9 @@
 :root {
   --serif: "DM Serif Display", serif;
   --sans: "Public Sans", sans-serif;
+
+  //   font-family: var(--sans);
+  //   font-family: var(--serif);
 }
 
 *,
@@ -18,11 +21,9 @@ body {
   background-color: #edf3f8;
 }
 
-body {
-  //   font-family: var(--serif);
-  //   font-family: var(--sans);
-}
-
 button {
   font-family: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
