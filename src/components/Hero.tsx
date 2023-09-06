@@ -1,4 +1,5 @@
 import styles from "./../styles/Hero.module.scss";
+import navStyles from "./../styles/Nav.module.scss";
 import phone from "./../assets/home/desktop/illustration-phone-mockup.svg";
 import bgPatternCircle from "./../assets/shared/desktop/bg-pattern-circle.svg";
 
@@ -13,15 +14,17 @@ const Hero = function () {
             <img src={phone} alt="" />
           </div>
 
-          <div>
-            <h1>Start building with our APIs for absolutely free.</h1>
+          <div className={styles.cta_box}>
+            <h1 className={styles.h1}>
+              Start building with our APIs for absolutely free.
+            </h1>
 
-            <form>
+            <form className={styles.form}>
               <input type="text" placeholder="Enter email address" />
-              <button>Schedule a Demo</button>
+              <button className={navStyles.btn_cta}>Schedule a Demo</button>
             </form>
 
-            <p>
+            <p className={styles.text}>
               Have any questions? <span>Contact Us</span>
             </p>
           </div>
