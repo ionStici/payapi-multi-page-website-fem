@@ -14,20 +14,16 @@ const Nav = function () {
 
     if (!navStatus) {
       // Open Nav
-
-      nav.classList.add(styles.open);
       icon.src = close;
-
+      nav.classList.add(styles.open);
       setNavStatus(true);
       return;
     }
 
     if (navStatus) {
       // Close Nav
-
-      nav.classList.remove(styles.open);
       icon.src = menu;
-
+      nav.classList.remove(styles.open);
       setNavStatus(false);
       return;
     }
