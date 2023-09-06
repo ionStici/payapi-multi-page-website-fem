@@ -1,11 +1,9 @@
 // // // // // // // // // // // // // // // // // // // //
 
-.container {
-}
+// .nav {}
 
-.inner_container {
+.wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   padding: 40px 24px 0 24px;
@@ -22,8 +20,9 @@
 .btn_toggle_nav {
   display: flex;
   align-items: center;
-  height: 38px;
-  padding-left: 15px;
+
+  position: relative;
+  z-index: 15;
 
   img {
     pointer-events: none;
@@ -32,48 +31,85 @@
 
 // // // // // // // // // // // // // // // // // // // //
 
-.nav_container {
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
+.container {
+  background: #1b262f;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+
+  width: 300px;
+  height: 100vh;
+  padding: 0 24px;
 
   position: fixed;
   z-index: 10;
-  left: 0;
   top: 0;
+  right: 0;
 
-  width: 100vw;
-  height: 100vh;
+  text-align: center;
+  font-family: var(--sans);
+  color: hsla(207, 58%, 99%, 1);
 
-  display: flex;
-  justify-content: end;
+  &::after {
+    content: "";
+    width: 252px;
+    height: 1px;
+    background-color: hsla(207, 58%, 99%, 1);
+    opacity: 0.15;
 
-  &_inner {
-    width: 300px;
-    transform: translateX(300px);
-  }
-
-  nav {
+    position: absolute;
+    z-index: 11;
+    left: 24px;
+    top: 95px;
   }
 
   ul {
     list-style: none;
+    margin-top: 139px;
   }
 
   li {
+    margin-bottom: 32px;
   }
 
   a,
   a:link,
   a:visited {
     text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
+
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
 .btn_cta {
+  color: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.115px;
+
+  width: 100%;
+  height: 48px;
+  background: #ba4270;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: 24px;
 }
 
-.open {
+// // // // // // // // // // // // // // // // // // // //
+
+.container {
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(300px);
+  transition: transform 0.35s;
+}
+
+.container.open {
+  visibility: visible;
+  pointer-events: all;
+
+  transform: translateX(0);
 }
 
 // // // // // // // // // // // // // // // // // // // //
