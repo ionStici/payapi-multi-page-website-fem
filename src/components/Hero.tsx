@@ -25,7 +25,7 @@ const Hero = function () {
             </form>
 
             <p className={styles.text}>
-              Have any questions? <span>Contact Us</span>
+              Have any questions? <a href=".">Contact Us</a>
             </p>
           </div>
         </div>
