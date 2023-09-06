@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";
+import CodeExample from "../components/CodeExample";
 import heroStyles from "./../styles/Hero.module.scss";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
           <Hero />
         </div>
         <Featured />
+        <CodeExample />
       </main>
     </>
   );
